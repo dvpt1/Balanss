@@ -1,0 +1,53 @@
+//
+//    Balans.rmk
+//
+//       RMAKE BALANS /dDEBUG
+//
+
+// Determine if DEBUGging is enabled
+#ifdef DEBUG
+   CompOptions := /m /q /l
+#else
+   CompOptions := /n /q /l
+#end
+
+.prg.obj:
+    clipper $< $(CompOptions)
+
+
+balans.obj:    balans.prg
+vars.obj:      vars.prg
+parol.obj:     parol.prg
+inp.obj:       inp.prg
+exprec.obj:    exprec.prg
+protoc.obj:    protoc.prg
+shablon.obj:   shablon.prg
+quan.obj:      quan.prg
+dict.obj:      dict.prg
+come.obj:      come.prg
+raschet.obj:   raschet.prg
+division.obj:  division.prg
+docum.obj:     docum.prg
+menu.obj:      menu.prg
+func.obj:      func.prg
+inpmon.obj:    inpmon.prg
+otchet.obj:    otchet.prg
+finans.obj:    finans.prg
+print.obj:     print.prg
+printo.obj:    printo.prg
+printr.obj:    printr.prg
+kassa.obj:     kassa.prg
+spravka.obj:   spravka.prg
+tunes.obj:     tunes.prg
+tunesin.obj:   tunesin.prg
+tunelist.obj:  tunelist.prg
+arhivs.obj:    arhivs.prg
+musor.obj:     musor.prg
+title.obj:     title.prg
+
+balans.exe:    balans.obj vars.obj  parol.obj  inp.obj  exprec.obj  protoc.obj \
+               shablon.obj quan.obj dict.obj come.obj raschet.obj division.obj \
+               docum.obj menu.obj func.obj inpmon.obj otchet.obj finans.obj print.obj printo.obj \
+               printr.obj kassa.obj spravka.obj tunes.obj tunesin.obj tunelist.obj \
+               arhivs.obj musor.obj title.obj
+   rtlink @balans

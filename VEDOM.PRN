@@ -1,0 +1,9 @@
+                         ‚…„Œ‘’œ-„…  ‘—…’“ {strline(var_exp)} {mDict("D2",var_exp,"D1",use_path+MainDIC,"")} ‡€ {alltrim(Month[month(I->T_DATE)])} {str(year(I->T_DATE),4)} £.
+{iif(is_sub,"áã¡áç¥â"+str(var_sub),"")} 
+
+
+   ãå£ «â¥p _________________
+
+   {date()}
+
+
